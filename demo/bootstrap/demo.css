@@ -1,0 +1,8 @@
+body {
+  margin-top: 20px;
+}
+
+.form-control[readonly] {
+  background-color: #fff;
+  cursor: default;
+}

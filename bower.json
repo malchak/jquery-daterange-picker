@@ -1,0 +1,26 @@
+{
+  "name": "jquery-daterange-picker",
+  "version": "0.0.1",
+  "description": "A date range plugin built on top of the jQuery UI Datepicker",
+  "keywords": [
+    "datepicker",
+    "date-range"
+  ],
+  "main": [
+    "jquery-daterange-picker.js",
+    "jquery-daterange-picker.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "demo",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery.ui": "~1.11.2",
+    "moment": "~2.8.3"
+  },
+  "devDependencies": {
+    "qunit": "~1.15.0"
+  }
+}
