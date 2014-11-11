@@ -1,0 +1,56 @@
+#daterange-picker-container {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  display: none;
+  padding: 20px;
+  position: absolute;
+  font-size: 12px;
+}
+
+#date-fields {
+  margin-right: 5px;
+}
+
+#date-fields input {
+  width: 100px;
+  background-color: #fff;
+  cursor: default;
+}
+
+#drp-container-datepicker {
+  padding-top: 5px;
+}
+
+#drp-input-startdate {
+  margin-left: 5px;
+}
+
+#drp-select-daterange {
+  margin-right: 5px;
+}
+
+#drp-btn-apply {
+  margin-right: 10px;
+  float: right;
+}
+
+#drp-btn-cancel {
+  margin: 2px 5px 0 0;
+  float: right;
+}
+
+.date-range-item {
+  background-color: yellow;
+}
+
+.date-range-item a {
+  background: 0 !important;
+}
+
+.ui-datepicker {
+  font-size: 12px;
+}
+
+.ui-datepicker .ui-icon {
+  text-indent: -99999px;
+}

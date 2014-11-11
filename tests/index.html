@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Datepicker plugin tests</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../bower_components/jquery.ui/themes/base/theme.css">
+  <link rel="stylesheet" href="../bower_components/jquery.ui/themes/base/datepicker.css">
+  <link rel="stylesheet" href="../jquery-daterange-picker.css">
+  <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css">
+</head>
+<body>
+
+  <div id="qunit"></div>
+  <div id="qunit-fixture">
+    <input id="daterange" class="form-control" value="" readonly>
+  </div>
+
+
+  <div id="daterange-picker-container">
+  </div>
+
+
+
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/jquery.ui/ui/datepicker.js"></script>
+  <script src="../bower_components/moment/moment.js"></script>
+  <script src="../jquery-daterange-picker.js"></script>
+  <script src="../bower_components/qunit/qunit/qunit.js"></script>
+  <script src="tests.js"></script>
+  <script>
+    $('#daterange').dateRangePicker({
+      container: '#daterange-picker-container',
+      defaultDateRange: 'LAST_30_DAYS',
+      test: true,
+      today: new Date(2014, 2, 30)
+    });
+  </script>
+</body>
+</html>

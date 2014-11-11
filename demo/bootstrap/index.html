@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Demo | jQuery Date Range Picker</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bower_components/jquery.ui/themes/base/theme.css">
+    <link rel="stylesheet" href="../../bower_components/jquery.ui/themes/base/datepicker.css">
+    <link rel="stylesheet" href="../../jquery-daterange-picker.css">
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            <input id="daterange" class="form-control" readonly>
+          </div>
+
+          <div id="daterange-picker-container"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/jquery.ui/ui/datepicker.js"></script>
+    <script src="../../bower_components/moment/moment.js"></script>
+    <script src="../../jquery-daterange-picker.js"></script>
+
+    <script>
+      $('#daterange').dateRangePicker({
+        container: '#daterange-picker-container',
+        defaultDateRange: 'LAST_30_DAYS'
+      });
+    </script>
+
+  </body>
+</html>
