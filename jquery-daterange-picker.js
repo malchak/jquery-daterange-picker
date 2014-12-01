@@ -295,6 +295,16 @@
 
       });
 
+
+      // close date picker if clicked elsewhere
+      $(document).click(function (event) {
+        var $target = $(event.target);
+        if (!($target.attr('id') === self._$element.attr('id') ||
+          $target.closest('#daterange-picker-container, .ui-datepicker-header').length)) {
+          self._$container.hide();
+        }
+      });
+
     }
 
   });
