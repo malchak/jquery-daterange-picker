@@ -141,10 +141,20 @@
 
     },
 
+    setDefaultSelectOption: function () {
+      var self = this;
+      $('#drp-select-daterange option').each(function(i, option) {
+        if (option.value === self.settings.defaultDateRange) {
+          $(option).attr('selected', 'selected');    
+        }
+      });
+    },
+
     initializeDateRange: function () {
 
       var dateRange = this.getDateRange(this.settings.defaultDateRange);
 
+      this.setDefaultSelectOption();
       this._$element.val(dateRange.start + ' - ' + dateRange.end);
       this._$startDate.val(dateRange.start);
       this._$endDate.val(dateRange.end);
@@ -233,6 +243,7 @@
 
           self._$startDate.val(start);
           self._$endDate.val(end);
+          self._$startDate.focus();
 
           $('#drp-container-datepicker').datepicker('refresh');
 
