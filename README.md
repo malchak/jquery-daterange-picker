@@ -47,7 +47,7 @@ $('#daterange').dateRangePicker({
 *Note:* `container` is required and must be passed with the appropriate id or class selector type string.
 
 
-###Options:
+### Options:
 
 ####- `defaultDateRange`
 
