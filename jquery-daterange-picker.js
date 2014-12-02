@@ -8,7 +8,7 @@
     numberOfMonths: 3,
     datepickerShowing: true,
     defaultDate: '-1D',
-    defaultDateRange: 'LAST_7_DAYS',
+    defaultDateRange: 'LAST_30_DAYS',
     maxDate: '-1D',
     minDate: new Date(2011, 0, 1),
     test: false,
@@ -143,7 +143,7 @@
 
     setDefaultSelectOption: function () {
       var self = this;
-      $('#drp-select-daterange option').each(function(i, option) {
+      self._$selectedDateRange.find('option').each(function(i, option) {
         if (option.value === self.settings.defaultDateRange) {
           $(option).attr('selected', 'selected');    
         }
@@ -165,7 +165,7 @@
 
       var self = this;
 
-      $('#drp-container-datepicker').datepicker({
+      self._$datepicker.datepicker({
         numberOfMonths: 3,
         datepickerShowing: true,
         dateFormat: 'M dd, yy', // ex. Aug 30, 2014
@@ -245,14 +245,14 @@
           self._$endDate.val(end);
           self._$startDate.focus();
 
-          $('#drp-container-datepicker').datepicker('refresh');
+          self._$datepicker.datepicker('refresh');
 
         };
 
         if (selectedDateRangeValue === 'CUSTOM') {
 
           self._$startDate.focus();
-          $('#drp-container-datepicker').datepicker('refresh');
+          self._$datepicker.datepicker('refresh');
 
         }
         else {
@@ -270,7 +270,7 @@
 
         self._$startDate.focus();
         self._$selectedDateRange.val('CUSTOM');
-        $('#drp-container-datepicker').datepicker('refresh');
+        self._$datepicker.datepicker('refresh');
 
       });
 
@@ -291,7 +291,7 @@
           self._$container.toggle();
           $(this).blur();
           self._$startDate.focus();
-          $('#drp-container-datepicker').datepicker('refresh');
+          self._$datepicker.datepicker('refresh');
         }
 
       });
@@ -302,7 +302,7 @@
         self._$container.toggle();
         $(this).blur();
         self._$startDate.focus();
-        $('#drp-container-datepicker').datepicker('refresh');
+        self._$datepicker.datepicker('refresh');
 
       });
 
@@ -323,10 +323,10 @@
 
   // a really lightweight plugin wrapper around the constructor,
   // preventing against multiple instantiations
-  $.fn[ pluginName ] = function ( options ) {
-    this.each(function() {
-      if ( !$.data( this, 'plugin_' + pluginName ) ) {
-        $.data( this, 'plugin_' + pluginName, new DateRangePicker( this, options ) );
+  $.fn[pluginName] = function (options) {
+    this.each(function () {
+      if (!$.data(this, 'plugin_' + pluginName)) {
+        $.data(this, 'plugin_' + pluginName, new DateRangePicker(this, options));
       }
     });
 
